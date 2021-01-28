@@ -12,9 +12,9 @@
 
 For each different ways of creating object write different solutions.
 
-- Create function to create object using Object.create and using the prototypal nature of object
-- Rather than storing a new object to store the function store it inside `F.prototype` and use new to create the instance of the Constructor function
-- Convert the Constructor function to class
+- Prototypal pattern of object creation (Put methods inside an object and create object using Object.create)
+- Pseudoclassical Pattern (Put methods inside F.prototype and use `new` to call function)
+- Create using class
 - Write test by creating two objects also test both methods.
 
 ### To test use the following data
