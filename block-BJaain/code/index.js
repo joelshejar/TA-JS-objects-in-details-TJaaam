@@ -1,11 +1,17 @@
 console.log(this.document === document); // Output
 
+// ------------
+
 console.log(this === window); //Output
+
+// ------------
 
 var myFunction = function () {
   console.log(this);
 };
 myFunction(); // Output
+
+// ------------
 
 function f1() {
   'use strict';
@@ -13,30 +19,24 @@ function f1() {
 }
 console.log(f1() === window); //Output
 
+// ------------
+
 function foo() {
   console.log('Simple function call');
   console.log(this === window);
 }
 
 foo(); //Output ??
-console.log(this === window)(
-  // Output
 
-  // This for IIFE
-  function () {
-    console.log('Anonymous function invocation');
-    console.log(this === window);
-  }
-)(); //Output
+// ------------
 
-// This for IIFE in strict mode
-function foo() {
-  'use strict';
-  console.log('Simple function call');
+// This for IIFE
+(function () {
+  console.log('Anonymous function invocation');
   console.log(this === window);
-}
+})(); //Output
 
-foo(); // Output
+// ------------
 
 var myObject = {};
 myObject.someMethod = function () {
@@ -44,7 +44,7 @@ myObject.someMethod = function () {
 };
 myObject.someMethod(); //Value Of This
 
-// This refers to the New Instance
+// ------------
 
 function Person(fn, ln) {
   this.firstName = fn;
@@ -60,7 +60,8 @@ person.displayName(); // Output
 let person2 = new Person('Paul', 'Adams');
 person2.displayName(); // Output
 
-// This refers to the invoker Object
+// ------------
+
 function foo() {
   'use strict';
   console.log('Simple function call');
@@ -80,7 +81,7 @@ let fun1 = user.foo1;
 fun1(); // Output ??
 user.foo1(); // Output ??
 
-// this will call apply and bind
+// ------------
 
 this.x = 9;
 var obj = {
@@ -98,7 +99,7 @@ retrieveX(); //Output ??
 var boundGetX = retrieveX.bind(obj);
 boundGetX(); // Output ??
 
-// Call with new constructor
+// ------------
 
 function Person(fn, ln) {
   this.firstName = fn;
@@ -116,7 +117,7 @@ person2.displayName(); // Output
 
 person.displayName.call(person2); // Output ??
 
-// Guess the output of the following
+// ------------
 
 const a = {
   a: 'a',
@@ -146,13 +147,7 @@ obj.getThis2.call(a);
 obj.getThis3();
 
 // Output
-obj.getThis3.call(a);
-
-// Output
 obj.getThis4();
-
-// Output
-obj.getThis4.call(a);
 
 // -------------
 
@@ -269,17 +264,6 @@ console.log(getSecondData()); // Output and why ???
 const call = {
   caller: 'mom',
   says: function () {
-    console.log(`Hey, ${this.caller} just called.`);
-  },
-};
-
-call.says(); // output ???
-
-// ----------------
-
-const call = {
-  caller: 'mom',
-  says: () => {
     console.log(`Hey, ${this.caller} just called.`);
   },
 };
