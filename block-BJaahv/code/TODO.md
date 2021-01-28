@@ -5,7 +5,7 @@ Create a object using the following patterns given below.
 ## Create in all 4 formats
 
 - [ ] Using function to create object
-- [ ] Using Object.create
+- [ ] Using Object.create (prototypal pattern)
 - [ ] Using Pseudoclassical Way
 - [ ] Using Class
 
@@ -16,11 +16,10 @@ Create User (class/function) with the following properties.
 - [ ] properties (data):
   - [ ] name
   - [ ] id
-  - [ ] password
   - [ ] noOfProjects
 - [ ] methods:
   - [ ] getProjects -> return number of project
-  - [ ] changeUsername -> returns old username
+  - [ ] changeName -> accepts one parameter (newName)returns old user name
   - [ ] incrementProject -> returns updated number of projects
   - [ ] decrementProject -> returns updated number of projects
 
