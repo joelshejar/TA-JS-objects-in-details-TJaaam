@@ -3,12 +3,12 @@ If we want to build any app the two most important thing to think about is Data 
 ### For single question we need the following data and methods:
 
 - Data:
-  - title (title of the question)
-  - options (array of options)
-  - correctAnswerIndex (index of the correct option)
+  - `title` (title of the question)
+  - `options` (array of options)
+  - `correctAnswerIndex` (index of the correct option)
 - Methods:
-  - isAnswerCorrect (will accept the index and returns `true` or `false` based on the answer is correct or not)
-  - getCorrectAnswer (will return the correct answer of the quiz when the function is called)
+  - `isAnswerCorrect` (will accept the index and returns `true` or `false` based on the answer is correct or not)
+  - `getCorrectAnswer` (will return the correct answer of the quiz when the function is called)
 
 ### Create the object using the following ways
 
