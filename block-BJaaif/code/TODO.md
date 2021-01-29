@@ -17,7 +17,7 @@ Inside `personStore` object, create a property `greet` where the value is a func
 
 #### Challenge 2/3
 
-Create a function `personFromPersonStore` that takes as input a `name` and an `age`. When called, the function will create person objects using the `Object.create` method on the `personStore` object.
+Create a function `personFromPersonStore` that takes as input a `name` and an `age`. When called, the function will create person objects using the `Object.create` method on the `personStore` object. And return the object with age and name.
 
 #### Challenge 3/3
 
@@ -67,4 +67,4 @@ Make sure that `adminFactory` objects have access to `adminFunctionStore` method
 
 #### Challenge 5/5
 
-Created a method called `sharePublicMessage` that logs 'Welcome users!' and will be available to `adminFactory` objects, but not `userFactory` objects. Do not add this method directly in the `adminFactory` function.
+Create a method called `sharePublicMessage` that logs 'Welcome users!' and will be available to `adminFactory` objects, but not `userFactory` objects. Do not add this method directly in the `adminFactory` function.
