@@ -1,6 +1,9 @@
 # Inheritance
 
-Convert the below requirements into inheritance using prototypal patters.
+Convert the below requirements into inheritance using:
+
+- Pseudoclassical Pattern
+- Class Pattern
 
 #### Animal
 
