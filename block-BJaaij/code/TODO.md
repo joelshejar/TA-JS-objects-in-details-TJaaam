@@ -1,34 +1,33 @@
 ## An object-oriented book-list!
 
-_[ ] Create a class BookList
-_[ ] Create another class called Book
-
-#### BookLists should have the following properties:
-
-1. Number of books marked as read
-2. Number of books marked not read yet
-3. A reference to the next book to read (book object)
-4. A reference to the current book being read (book object)
-5. A reference to the last book read (book object)
-6. An array of all the Books
+- [ ] Create a class BookList
+- [ ] Create another class called Book
 
 #### Each Book should have several properties:
 
 1. Title
-2. Genre
+2. Category
 3. Author
-4. Read (true or false)
-5. Read date, can be blank, otherwise needs to be a JS Date() object
+4. isRead (default to `false`)
+5. finishedDate
 
-Every Booklist should have a few methods:
--add(book)
+Book class will have the following methods:
 
-- [ ] should add a book to the books list.
+- `markBookAsRead` when called will change the `isRead` property on the book to be `true`. It will also change the `finishedDate` to be the `Date.now()` when this function is called.
 
--finishCurrentBook()
+#### BookList should have the following properties:
 
-- [ ] should mark the book that is currently being read as "read"
-- [ ] Give it a read date of new Date(Date.now())
+1. An array of all the Books
+2. Current read book index
+
 - [ ] Change the last book read to be the book that just got finished
 - [ ] Change the current book to be the next book to be read
 - [ ] Change the next book to be read property to be the first unread book you find in the list of books
+
+#### BookList Methods
+
+- [] `add(Book)` should add a book to the book list array.
+- [] `getCurrentBook()` should return the current book using the `index` and the book array
+- [] `getNextBook()` should return the bext book using the `index` and the book array
+- [] `getPrevBook()` should return the previous book using the `index` and the book array
+- [] `changeCurrentBook` should accept one parameter and update the current index.
