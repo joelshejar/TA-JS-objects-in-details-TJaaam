@@ -20,14 +20,12 @@ Book class will have the following methods:
 1. An array of all the Books
 2. Current read book index
 
-- [ ] Change the last book read to be the book that just got finished
-- [ ] Change the current book to be the next book to be read
-- [ ] Change the next book to be read property to be the first unread book you find in the list of books
-
 #### BookList Methods
 
-- [] `add(Book)` should add a book to the book list array.
+- [] `add([Book])` will accept an array (list of books). Once the method is called the book will added to the list.
 - [] `getCurrentBook()` should return the current book using the `index` and the book array
 - [] `getNextBook()` should return the bext book using the `index` and the book array
 - [] `getPrevBook()` should return the previous book using the `index` and the book array
 - [] `changeCurrentBook` should accept one parameter and update the current index.
+
+After creating the Book and BookList class create 5 book object and add it to list. Test all the methods in Book and BookList class.
