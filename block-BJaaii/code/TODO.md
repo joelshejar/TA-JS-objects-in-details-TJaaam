@@ -8,7 +8,7 @@ Stack
 Queue
 ![Queue](../assets/queue.gif)
 
-1. Create a class name `Stack` with the following data and methods. Also implement a `length` getter and setter method.
+1. Create a class name `Stack` with the following data and methods. Also implement a `length` getter method.
 
 Data:
 
@@ -46,7 +46,7 @@ myStack.pop();
 console.log(myStack.isEmpty()); // true
 ```
 
-2. Create a class name `Queue` with the following data and methods. Also implement a `length` getter and setter method.
+2. Create a class name `Queue` with the following data and methods. Also implement a `length` getter method.
 
 Data:
 
@@ -71,7 +71,7 @@ let atmQueue = new Queue();
 atmQueue.enqueue('Aman');
 atmQueue.enqueue('John');
 atmQueue.enqueue('Rohan');
-atmQueue.displaySqueue(); // "Aman John Rohan"
+console.log(atmQueue.displayQueue()); // "Aman John Rohan"
 console.log(atmQueue.length); // 3
 console.log(atmQueue.peek()); // "Aman"
 console.log(atmQueue.peek(1)); // "John"
