@@ -70,7 +70,7 @@ let num = [1, 2, 3, 4, 2, 3, 6, 7, 7];
 let strings = 'helloworld'.split('');
 
 console.log(num.unique()); // [1, 2, 3, 4, 6, 7]
-console.log(strings.shuffle()); // ['h', 'e', 'l', 'o', 'w', 'r', 'd']
+console.log(strings.unique()); // ['h', 'e', 'l', 'o', 'w', 'r', 'd']
 
 /*
 5. Add a method named `intersection` to Array.prototype. The method intersection will accept an array and returns a new
