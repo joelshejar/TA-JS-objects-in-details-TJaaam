@@ -24,7 +24,7 @@ Book class will have the following methods:
 
 - [] `add([Book])` will accept an array (list of books). Once the method is called the book will added to the list.
 - [] `getCurrentBook()` should return the current book using the `index` and the book array
-- [] `getNextBook()` should return the bext book using the `index` and the book array
+- [] `getNextBook()` should return the next book using the `index` and the book array
 - [] `getPrevBook()` should return the previous book using the `index` and the book array
 - [] `changeCurrentBook` should accept one parameter and update the current index.
 
