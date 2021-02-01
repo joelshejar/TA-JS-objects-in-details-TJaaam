@@ -12,19 +12,20 @@ Queue
 
 Data:
 
-- stack
+- `stack`
 
 Methods:
 
-- push: will accept a value and add to the stack. Stack adds data at the end
-- pop: will delete the last element (max index) of the stack
-- peek: can accept and optional parameter. Will display the element at the given index(passed as argument). If nothing is passed display the last element (last index)
-- reverse: will reverse all the elements of the stack and return the reversed stack
-- isEmpty: returns `true` if the stack is empty and `false` if the stack has any data.
+- `push`: will accept a value and add to the stack. Stack adds data at the end
+- `pop`: will delete the last element (max index) of the stack
+- `peek`: can accept and optional parameter. Will display the element at the given index(passed as argument). If nothing is passed display the last element (last index)
+- `reverse`: will reverse all the elements of the stack and return the reversed stack
+- `isEmpty`: returns `true` if the stack is empty and `false` if the stack has any data.
+- `displayStack`: returns all the data in stack in string format
 
 Getter
 
-- length: returns the current length of the stack.
+- `length`: returns the current length of the stack.
 
 #### Test
 
@@ -36,6 +37,7 @@ console.log(myStack.length); // 2
 console.log(myStack.peek()); // "Two"
 console.log(myStack.peek(0)); // "One"
 console.log(myStack.reverse()); // ['Two', 'One']
+console.log(myStack.displayStack()); // 'Two One'
 myStack.pop();
 console.log(myStack.length); // 1
 console.log(myStack.peek()); // 'Two'
@@ -48,18 +50,19 @@ console.log(myStack.isEmpty()); // true
 
 Data:
 
-- queue
+- `queue`
 
 Methods:
 
-- enqueue(item): Adds the item at the end of the queue
-- dequeue: Removes an item from the top of the queue
-- peek: can accept and optional parameter. Will display the element at the given index(passed as argument). If nothing is passed display the first element from top (index 0)
-- isEmpty: returns `true` if the stack is empty and `false` if the stack has any data.
+- `enqueue`(item): Adds the item at the end of the queue
+- `dequeue`: Removes an item from the top of the queue
+- `peek`: can accept and optional parameter. Will display the element at the given index(passed as argument). If nothing is passed display the first element from top (index 0)
+- `isEmpty`: returns `true` if the stack is empty and `false` if the stack has any data.
+- `displayStack`: returns all the data in stack in string format
 
 Getter
 
-- length: returns the current length of the stack.
+- `length`: returns the current length of the stack.
 
 #### Test
 
@@ -68,6 +71,7 @@ let atmQueue = new Queue();
 atmQueue.enqueue('Aman');
 atmQueue.enqueue('John');
 atmQueue.enqueue('Rohan');
+atmQueue.displayStack(); // "Aman John Rohan"
 console.log(atmQueue.length); // 3
 console.log(atmQueue.peek()); // "Aman"
 console.log(atmQueue.peek(1)); // "John"
