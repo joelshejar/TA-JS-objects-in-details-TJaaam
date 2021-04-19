@@ -64,10 +64,9 @@ function createProjects(name, id, noOfProjects){
 //- [ ] Using Pseudoclassical Way
 
 function createProjects(name, id, noOfProjects){
-    let project ={}
-    project.name = name
-    project.id = id
-    project.noOfProjects = noOfProjects
+    this.name = name
+    this.id = id
+    this.noOfProjects = noOfProjects
     
 }
 
