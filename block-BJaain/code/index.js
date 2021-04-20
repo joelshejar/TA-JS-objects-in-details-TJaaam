@@ -1,15 +1,15 @@
-console.log(this.document === document); // Output
+console.log(this.document === document); // Output True
 
 // ------------
 
-console.log(this === window); //Output
+console.log(this === window); //Output True
 
 // ------------
 
 var myFunction = function () {
   console.log(this);
 };
-myFunction(); // Output
+myFunction(); // Output Window {0: global, 1: global, window: Window, self: Window, document: document, name: "", location: Location, …}
 
 // ------------
 
@@ -17,7 +17,7 @@ function f1() {
   'use strict';
   return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); //Output false
 
 // ------------
 
@@ -26,7 +26,7 @@ function foo() {
   console.log(this === window);
 }
 
-foo(); //Output ??
+foo(); //Output ?? Simple function call and True
 
 // ------------
 
@@ -34,7 +34,7 @@ foo(); //Output ??
 (function () {
   console.log('Anonymous function invocation');
   console.log(this === window);
-})(); //Output
+})(); //Output Anonymous function invocation and true
 
 // ------------
 
@@ -42,7 +42,7 @@ var myObject = {};
 myObject.someMethod = function () {
   console.log(this);
 };
-myObject.someMethod(); //Value Of This
+myObject.someMethod(); //Value Of This{someMethod: ƒ}
 
 // ------------
 
@@ -56,9 +56,9 @@ function Person(fn, ln) {
 }
 
 let person = new Person('John', 'Reed');
-person.displayName(); // Output
+person.displayName(); // Output Name: John Reed
 let person2 = new Person('Paul', 'Adams');
-person2.displayName(); // Output
+person2.displayName(); // Output Name: Paul Adams
 
 // ------------
 
@@ -76,9 +76,10 @@ let user = {
   },
 };
 
-user.foo(); // Output
+user.foo(); // Output VM489:3 Uncaught ReferenceError: foo is not defined at <anonymous>:3:8
+
 let fun1 = user.foo1;
-fun1(); // Output ??
+fun1(); // Output ?? ReferenceError
 user.foo1(); // Output ??
 
 // ------------
@@ -91,13 +92,13 @@ var obj = {
   },
 };
 
-obj.getX(); // Output ??
+obj.getX(); // Output ?? 81
 
 var retrieveX = obj.getX;
-retrieveX(); //Output ??
+retrieveX(); //Output ?? 9
 
 var boundGetX = retrieveX.bind(obj);
-boundGetX(); // Output ??
+boundGetX(); // Output ?? 81
 
 // ------------
 
@@ -111,9 +112,9 @@ function Person(fn, ln) {
 }
 
 let person = new Person('John', 'Reed');
-person.displayName(); // Output
+person.displayName(); // Output Name: John Reed
 let person2 = new Person('Paul', 'Adams');
-person2.displayName(); // Output
+person2.displayName(); // Output Name: Paul Adams
 
 person.displayName.call(person2); // Output ??
 
@@ -131,23 +132,24 @@ const obj = {
 obj.getThis3 = obj.getThis.bind(obj);
 obj.getThis4 = obj.getThis2.bind(obj);
 
-// Output
+// Output Window
 obj.getThis();
 
-// Output
+// Output Window
 obj.getThis.call(a);
 
-// Output
+// Output {getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
 obj.getThis2();
 
-// Output
+// Output a = {  a: 'a',};
 obj.getThis2.call(a);
 
 // Output
 obj.getThis3();
 
-// Output
+// Output{getThis: ƒ, getThis2: ƒ, getThis3: ƒ, getThis4: ƒ}
 obj.getThis4();
+
 
 // -------------
 
@@ -268,7 +270,7 @@ const call = {
   },
 };
 
-call.says(); // output ???
+call.says(); // output ??? Hey mom just called
 
 // -----------------
 
@@ -281,7 +283,7 @@ const call = {
 
 let newCall = call.says;
 
-newCall(); // output ???
+newCall(); // output ??? Hey, undefined just called.
 
 //  -----------------
 
