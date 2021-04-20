@@ -31,9 +31,42 @@ class Square{
     }
 }
 - Create a `area` getter method using which we can get the area of the square.
-
+class Square{
+    constructor(side){
+        this.width = side
+        this.height = side
+    }
+    description(){
+        alert(`The square is ${this.width} x ${this.height}`)
+    }
+    calcArea(){
+        return (this.width*this.height)
+    }
+    get area(){
+        return (this.width*this.height)
+    }
+}
 - Create a `area` setter method that will accept the area of the square. Based on the value of area it will set the value of `width` and `height`. If the passed value is not the area of the square alert say `Not a valid input`
-
+class Square{
+    constructor(side){
+        this.width = side
+        this.height = side
+    }
+    description(){
+        alert(`The square is ${this.width} x ${this.height}`)
+    }
+    calcArea(){
+        return (this.width*this.height)
+    }
+    get area(){
+        return (this.width*this.height)
+    }
+    set area(value){
+        let side = Math.sqrt(value)
+        this.width = side
+        this.height = side
+    }
+}
 - Create a static method named `isEqual` which accepts two `square` object with `width` and `height` property. If the area of both square is same it will return `true` or `false`.
 class Square{
     constructor(side){
@@ -46,12 +79,20 @@ class Square{
     calcArea(){
         return (this.width*this.height)
     }
-    static isEqual(Square(width,height), Square1(width,height)){
+    static isEqual(Square Square1{
         if(Square.calcArea()==Square1.calcArea()){
             return true
         } else {
             return false
         }
+    }
+    get area(){
+        return (this.width*this.height)
+    }
+    set area(value){
+        let side = Math.sqrt(value)
+        this.width = side
+        this.height = side
     }
 }
 
@@ -60,6 +101,7 @@ class Square{
     constructor(side){
         this.width = side
         this.height = side
+        this.numberOfTimes = 0
     }
     description(){
         alert(`The square is ${this.width} x ${this.height}`)
@@ -74,12 +116,20 @@ class Square{
             return false
         }
     }
-    let executed = 0
-    if(executed<4){
-        numberOfTimes(){
-
+    get area(){
+        this.numberOfTimes++
+        if(this.numberOfTimes >= 4){
+            alert(`Upper Limit Reached`)
+        } else{
+            return (this.width*this.height)
         }
-        }
+        
+    }
+    set area(value){
+        let side = Math.sqrt(value)
+        this.width = side
+        this.height = side
+    }
     }
     
 - Create two instance of the `Square` class
