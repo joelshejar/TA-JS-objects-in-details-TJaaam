@@ -64,10 +64,8 @@ Make sure it does not the changes the original array.
 */
 
 // You code goes here
-Array.prototype.shuffle =  function(cb){
-  this.reduce((acc,cv,i) => {
-
-  },[])
+Array.prototype.shuffle =  function(){
+  return [...this].sort(() => Math.random - 0.5)
 }
 // Test to check the shuffle method (It will return different output every time you call)
 console.log(numbers.shuffle());
@@ -83,7 +81,7 @@ Unique means no element should come multiple times.
 
 // You code goes here
 Array.prototype.unique = function(){
-  this.reduce((acc,cv,i) => {
+  return this.reduce((acc,cv,i) => {
     if(!acc.includes(cv)){
       acc[i] = cv
     }
@@ -108,9 +106,9 @@ array that will contain only element that is common in both the array.
 
 // You code goes here
 Array.prototype.intersection = function(arr){
-  this.reduce((acc,cv) => {
+  return this.reduce((acc,cv) => {
     let value = cv
-    arr.reduce((acc1, cv1,i) => {
+    return arr.reduce((acc1, cv1,i) => {
       if(cv1 == value){
         acc1[i] = value
       }
