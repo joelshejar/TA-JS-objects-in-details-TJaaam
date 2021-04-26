@@ -1,0 +1,64 @@
+html{
+    font-size: 16px;
+}
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+h1{
+    font-size: 3rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.container{
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.width-10{
+    width: 10%;
+}
+
+form{
+    margin-top: 2rem;
+    label{
+        margin-bottom: 0.5rem;
+        display: inline-block;
+    }
+    input{
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        outline: none;
+        border: 1px solid lightgray;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+    }
+    button{
+        display: block;
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        background: lightblue;
+        border-radius: 0.25rem;
+    }
+}
+
+
+table{
+    width: 100%;
+    thead{
+        background: lightblue;
+        padding: 0.5rem;
+        font-size: 1.25rem;
+    }
+    th,td{
+        text-align: start;
+        padding: 0.5rem;
+    }
+}
