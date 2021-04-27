@@ -5,13 +5,16 @@ class Question{
         this.correctAnswer = correctAnswer
     }
     isCorrectAnswer(answer){
-        if(answer == this.correctAnswer){
+        if(answer == this.options[this.correctAnswer]){
             return true
             updateScore
         } else{
             return false
         }
         
+    }
+    getCorrectAnswer(){
+        return this.options[this.correctAnswer]
     }
     createUI(){
         let questionContainer = document.querySelector('.question-container')
@@ -30,23 +33,36 @@ class Question{
 }
 
 class Quiz{
-    constructor(allQuestions, activeIndex, score){
+    constructor(allQuestions =[], score=0){
         this.allQuestions = allQuestions
-        this.activeIndex = activeIndex
+        this.activeIndex = 0
         this.score = score
     }
-    nextQuestion(){
-        this.activeIndex+=1
+    nextQuestion(title,options,correctAnswer){
+        let question = new Question(title,options,correctAnswer)
+        this.allQuestions.push(question)
     }
     createUI(){
-        
+        let activeQuestion = this.allQuestions[this.activeIndex]
     }
     updateScore(){
         this.score = this.score+1
     }
 }
 
+function tweetQuote() {
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${quoteText.textContent} - ${authorText.textContent}`
+    window.open(twitterUrl, '_blank')
+}
 
+
+let quiz = new Quiz()
+
+questions.forEach((elm) => {
+    quiz.nextQuestion(elm.question, elm.options, elm.answer)
+})
+
+quiz.createUI()
 
 
 
